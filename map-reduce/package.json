@@ -1,5 +1,5 @@
 {
-  "name": "asynchronous",
+  "name": "map-reduce",
   "version": "1.0.0",
   "description": "Collection of Javascript ES6+ recipes.",
   "scripts": {
