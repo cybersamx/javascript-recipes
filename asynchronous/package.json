@@ -1,7 +1,7 @@
 {
   "name": "asynchronous",
   "version": "1.0.0",
-  "description": "Collection of Javascript ES6+ recipes.",
+  "description": "Promise recipe.",
   "scripts": {
     "start": "babel-node index.js"
   },

@@ -34,7 +34,7 @@ console.log(`The sum of ${numbers} are ${transformed}`);
 // --- Filtering and find first element ---
 
 // Apply the same logic to filter and find with different output.
-let oddFunc = (n) => {
+const oddFunc = (n) => {
   return n%2 === 0;
 };
 
@@ -45,11 +45,11 @@ console.log(`The first odd number of ${numbers} is ${numbers.find(oddFunc)}`);
 
 // You can use Array.splice() or Array.pop() to remove an element but these
 // functions are mutable, while filter() is immutable.
-let remove = (index, array) => {
+const remove = (index, array) => {
   return array.filter((n, i) => i !== index);
 };
 
-transformed = remove(1, numbers)
+transformed = remove(1, numbers);
 
 console.log(`The new array with the 2nd element removed from ${numbers} is ${transformed}`);
 
