@@ -39,3 +39,4 @@ We also need to define a `tsconfig.json` file and a `babel.config.json` (or `.ba
 
 * [Microsoft TypeScript Babel Starter](https://github.com/microsoft/TypeScript-Babel-Starter)
 * [TypeScript Compiler Options](https://www.typescriptlang.org/docs/handbook/compiler-options.html)
+* [TypeScript Language Specification](https://github.com/microsoft/TypeScript/blob/v3.7.5/doc/spec.md)
