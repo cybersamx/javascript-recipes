@@ -6,3 +6,4 @@ Collection of Javascript ES6+ recipes.
 * [Map-reduce-filter-find patterns](map-reduce)
 * [Promise and callback](asynchronous)
 * [The spread operator](spread)
+* [TypeScript Babel Starter Project for Node](typescript)
