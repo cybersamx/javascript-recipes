@@ -1,6 +1,6 @@
 # Simple Mongo Example
 
-A simple MongoDB CRUD example using Mongoose and JavaScript. This example uses Mongoose to define a model and manage CRUD operations with MongoDB.
+A simple MongoDB CRUD example using TypeScript and Mongoose. This example uses Mongoose to define a model and manage CRUD operations with MongoDB.
 
 ## Setup
 

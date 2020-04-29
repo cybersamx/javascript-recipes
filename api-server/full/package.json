@@ -1,0 +1,50 @@
+{
+  "name": "full-api-server",
+  "version": "1.0.0",
+  "description": "A full API server with express, mongoose, and passport.",
+  "scripts": {
+    "clean": "rm -rf ./dist/*",
+    "build": "babel -d ./dist ./src -s",
+    "lint": "eslint --ext .js,.jsx --no-error-on-unmatched-pattern ./src",
+    "lint-fix": "eslint --ext .js,.jsx --no-error-on-unmatched-pattern --fix ./src",
+    "serve": "npm run build && node ./dist/server.js",
+    "start": "nodemon --exec babel-node ./src/server.js",
+    "start-debug": "nodemon --inspect --exec babel-node ./src/server.js",
+    "test": "jest --testEnvironment=node --coverage"
+  },
+  "author": "Samuel Chow",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^4.0.1",
+    "colors": "^1.4.0",
+    "crypto-js": "^4.0.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.10",
+    "passport": "^0.4.1",
+    "passport-google-oauth2": "^0.2.0",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/node": "^7.8.7",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-proposal-object-rest-spread": "^7.8.3",
+    "@babel/preset-env": "^7.9.5",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.3",
+    "eslint-plugin-import": "^2.20.2",
+    "jest": "^25.4.0",
+    "nodemon": "^2.0.3",
+    "prettier": "^2.0.5",
+    "prettier-eslint": "^9.0.1",
+    "supertest": "^4.0.2"
+  },
+  "engines": {
+    "node": ">=12.10.0",
+    "npm": ">=6.13.0"
+  }
+}
