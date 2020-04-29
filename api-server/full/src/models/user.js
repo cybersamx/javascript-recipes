@@ -9,9 +9,13 @@ const UserSchema = mongoose.Schema(
         },
         password: String,
         salt: String,
-        googleUserName: String,
-        fullName: String,
-        avatar: String,
+        googleId: String,
+        tokens: Array,
+        profile: {
+            fullName: String,
+            gender: String,
+            avatar: String,
+        },
     },
     { timestamp: true },
 );

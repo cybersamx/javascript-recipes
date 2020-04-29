@@ -12,22 +12,24 @@ export const getHealthCheck = (upAt) => (req, res) => {
 };
 
 export const postSignup = (req, res, next) => {
-    const user = new User({
-        email: req.body.email,
-        password: req.body.password,
-        fullName: req.body.fullName,
-    });
-
-    User.findOne({ email: user.email }, (err, foundUser) => {
+    User.findOne({ email: req.body.email }, (err, foundUser) => {
         if (err) {
             return next(err);
         }
         if (foundUser) {
             res.status(401).json({
-                msg: `email address ${user.email} has been taken`,
+                msg: `email address ${req.body.email} has been taken`,
             });
             return;
         }
+
+        const user = new User({
+            email: req.body.email,
+            password: req.body.password,
+            profile: {
+                fullName: req.body.fullName,
+            },
+        });
 
         user.save((err) => {
             if (err) {

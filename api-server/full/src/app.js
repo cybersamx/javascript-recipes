@@ -34,9 +34,33 @@ app.use(passport.initialize());
 // Others
 const upAt = new Date(); // Server started at.
 
-// Routes
+// Primary Routes
 app.get('/', authController.getHealthCheck(upAt));
 app.post('/signup', authController.postSignup);
 app.post('/signin', authController.postSignin);
+
+// OAuth2 Routes
+app.get(
+    '/oauth/google',
+    passport.authenticate('google', {
+        scope: [
+            'profile',
+            'email',
+            'https://www.googleapis.com/auth/drive',
+            'https://www.googleapis.com/auth/spreadsheets.readonly',
+        ],
+        accessType: 'offline',
+        prompt: 'consent',
+    }),
+);
+app.get(
+    '/oauth/google/callback',
+    passport.authenticate('google', {
+        failureRedirect: '/signin',
+    }),
+    (req, res) => {
+        res.redirect(req.session.returnTo || '/');
+    },
+);
 
 export default app;
