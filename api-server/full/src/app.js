@@ -43,12 +43,7 @@ app.post('/signin', authController.postSignin);
 app.get(
     '/oauth/google',
     passport.authenticate('google', {
-        scope: [
-            'profile',
-            'email',
-            'https://www.googleapis.com/auth/drive',
-            'https://www.googleapis.com/auth/spreadsheets.readonly',
-        ],
+        scope: ['profile', 'email'],
         accessType: 'offline',
         prompt: 'consent',
     }),

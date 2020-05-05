@@ -1,6 +1,6 @@
-# Simple API Server
+# A More Full-Featured API Server
 
-A simple REST API server using Node.js and Express.
+A more featured REST API server using Node.js and Express.
 
 ## Notes
 
@@ -23,4 +23,17 @@ This project leverages the following dependencies
 
    ```bash
    $ npm start
+   ```
+
+1. Test the endpoints
+
+   ```bash
+   $ curl http://localhost:8080
+   $ curl --request POST 'http://localhost:9000/signup' \
+     --header 'Content-Type: application/json' \
+     --data-raw '{
+         "email": "john@example.com",
+         "password": "password",
+         "fullName": "John Lee"
+     }'
    ```
