@@ -1,0 +1,15 @@
+{
+  "name": "generator",
+  "version": "1.0.0",
+  "description": "Recipes using the ES6 generator.",
+  "scripts": {
+    "start": "babel-node index.js"
+  },
+  "author": "Samuel Chow",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/node": "^7.8.7",
+    "@babel/preset-env": "^7.9.6 "
+  }
+}
