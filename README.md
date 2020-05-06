@@ -12,5 +12,7 @@ Collection of Javascript ES6+ recipes.
 * [MongoDB](mongo)
   * [Simple MongoDB CRUD using Javascript](mongo/javascript)
 * [Promise and callback](asynchronous)
+* [Redux](redux)
+  * [Redux basics](redux/basics)
 * [The spread operator](spread)
 * [TypeScript Babel Starter Project for Node](typescript)
