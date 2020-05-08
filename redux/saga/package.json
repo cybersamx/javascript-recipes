@@ -1,0 +1,21 @@
+{
+  "name": "redux-saga",
+  "version": "1.0.0",
+  "description": "Basic examples of using Redux-Saga.",
+  "scripts": {
+    "start": "babel-node index.js"
+  },
+  "author": "Samuel Chow",
+  "license": "MIT",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "readline-sync": "^1.4.10",
+    "redux": "^4.0.5",
+    "redux-saga": "^1.1.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/node": "^7.8.7",
+    "@babel/preset-env": "^7.9.6 "
+  }
+}

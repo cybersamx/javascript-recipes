@@ -14,5 +14,6 @@ Collection of Javascript ES6+ recipes.
 * [Promise and callback](asynchronous)
 * [Redux](redux)
   * [Redux basics](redux/basics)
+  * [Redux Saga](redux/saga)
 * [The spread operator](spread)
 * [TypeScript Babel Starter Project for Node](typescript)

@@ -10,9 +10,6 @@ import { addMessage, filterByUser } from "./actions";
 // Create a Redux store.
 const store = createStore(chatReducers);
 
-// Get the initial state.
-console.log(store.getState());
-
 // --- Subscribers ---
 
 // Subscribe all dispatches and print the current state of the store.
@@ -20,12 +17,12 @@ const unsubscribe = store.subscribe(() => {
   let prefix = colors.blue('Store:');
   console.log(prefix, store.getState());
 
-  const username = store.getState().uiReducer.filter;
+  const username = store.getState().filter.username;
   if (!username) {
     return;
   }
   prefix = colors.blue(`Filtered Messages by ${username}:`);
-  const messages = store.getState().dataReducer.filter((msg) => msg.username === username);
+  const messages = store.getState().messages.filter((msg) => msg.username === username);
   console.log(prefix, messages);
 });
 
